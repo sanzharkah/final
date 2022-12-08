@@ -313,12 +313,13 @@ body {
 
 .product-photo img{
 	display: flex;
-	width: 400px;
-	height: 300px;
-    margin-left: 20px;
+	width: 350px;
+	height: 250px;
+    justify-content: center;
+    align-items: center;
 }
 
-.product-photo:hover{
+.product:hover{
     transition: 1s;
     box-shadow: 0 0 5px #1c1e22, 
     0 0 20px white,
@@ -370,3 +371,137 @@ h2{
 }
 
 
+@media only screen and (max-width: 1400px) {
+    .img2 img {
+        width: 100%;
+    }
+    .content2 {
+        width: 100%;
+    }
+    .product-photo img{
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .img2 img {
+        width: 100%;
+    }
+    .content2 {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .product-photo img{
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .content2{
+        width: 100%;
+        height: auto;
+        padding: 0 20px;
+    }
+    .img2 img{
+        width: 100%;
+        height: 350px;
+    }
+    .containerr {
+        width: 100%;
+    }
+    .content{
+        height: 800px;
+    }
+    .product-photo img{
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .img2 img {
+        width: 670px;
+        height: 250px;
+        margin: 20px;
+        padding: 0 20px;
+
+    }
+    .content2 {
+        width: 100%;
+    }
+    .product-photo img{
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .img2 img {
+        width: 520px;
+        height: 170px;
+        margin: 20px;
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .img2 img {
+        width: 275px;
+        height: 140px;
+        margin: 20px;
+        padding: 0 20px;
+
+    }
+    .content{
+        height: 1450px;
+    }
+    .txt1 {
+        font-size: 18px;
+
+    }
+    .battons {
+        width: 70px;
+        height: 25px;
+        font-size: 11px;
+        margin: 1px;
+    }
+
+    .main__title{
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    .subtitle {
+        display: flex;
+        font-size: 12px;
+        margin-left: 3px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .title {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        font-size: 14px;
+        margin-left: -10px;
+    }
+    .footer__input {
+        width: 50px;
+        font-size: 8px;
+    }
+    .img1 {
+        margin-left: -80px;
+        margin-top: 60px;
+    }
+    .toggle {
+        margin-left: 170px;
+        margin-top: -140px;
+    }
+}
