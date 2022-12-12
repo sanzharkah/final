@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS-GO</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
 </head>
 <body>
     <section class="section1">
@@ -84,6 +85,64 @@
             </ul>
         </div>
     </section>
+
+
+    <section class="section4">
+        <h1 class="txt1">Популярные Карты</h1>
+    <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="img/map1.jpg" style="width:100%">
+      <div class="text">Map 1</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="img/map2.jpg" style="width:100%">
+      <div class="text">Map 2</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="img/map3.jpg" style="width:100%">
+      <div class="text">Map 3</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+    </section>
+
+
+
+    <!-- <section class="section5">
+        <div class="ruletka">
+            <div class="shadow"></div>
+	            <div class="random">
+		        <div class="result"></div>
+		        <div class="cards">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+			<div>10</div>
+			<div>11</div>
+		</div>
+	</div>
+	<button class="start" onclick="start()">START</button>
+        </div>
+    </section> -->
+
+
+
     <section class="section-footer">
         <div class="containerr">
             <div class="footer">
@@ -109,7 +168,7 @@
                 </div>
                 <div class="footer__inner">
                     <h3 class = "title">Newsletter</h3>
-                    <p class="subtitle">Enter y    our email and get notified <br>about news, of.</p>
+                    <p class="subtitle">Enter your email and<br>get notified about news</p>
                     <div>
                         <input class="footer__input" type="text" placeholder="email address">
                     </div>
@@ -117,5 +176,20 @@
             </div>
         </div>
     </section>
+
+    <!-- <script>
+        var cards_block = document.querySelector('.cards');
+var cards = document.querySelectorAll('.cards > div');
+
+function start() {
+  var random = Math.floor(Math.random() * 9); // От 0 до 8
+  cards_block.style.left = -random * 100 + 'px';
+  setTimeout(function() {
+    random++;
+    cards[random].style.background = '#7B90F7';
+    cards[random].style.color = 'white';
+  }, 5000)
+}
+    </script> -->
 </body>
 </html>
