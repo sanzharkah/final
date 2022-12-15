@@ -1,0 +1,29 @@
+[
+    {
+        "id":123,
+        "title":"AWP",
+        "img":"awp1.png",
+        "price":350,
+        "category":"awp.html"
+    },{
+        "id":12,
+        "title":"Desert digle",
+        "img":"pist1.png",
+        "price":200,
+        "category":"pist.html"
+    },
+    {
+        "id":11,
+        "title":"M4 A1",
+        "img":"vint1.png",
+        "price":300,
+        "category":"vint.html"
+    },
+    {
+        "id":10,
+        "title":"M4 A1",
+        "img":"vint2.png",
+        "price":320,
+        "category":"vint.html"
+    }
+]
