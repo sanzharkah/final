@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rul.css">
+</head>
+<body>
+
+    <section class="section5">
+        <div class="ruletka">
+            <div class="shadow"></div>
+	            <div class="random">
+		        <div class="result"></div>
+		        <div class="cards">
+			<div><img src="img/awp1.png" alt="" style="width: 250px; height:auto;"></div>
+			<div><img src="img/pist1.png" alt="" style="width: 250px; height:auto;"></div>
+			<div><img src="img/dr1.png" alt="" style="width: 250px; height:auto;"></div>
+			<div><img src="img/vint1.png" alt="" style="width: 250px; height:auto;"></div>
+			<div><img src="img/noj1.png" alt="" style="width: 250px; height:auto;"></div>
+			<div><img src="img/pist2.png" alt="" style="width: 250px; height:auto;"></div>
+			<div><img src="img/vint3.png" alt="" style="width: 250px; height:auto;"></div>
+			<div><img src="img/awp3.png" alt="" style="width: 250px; height:auto;"></div>
+			<div><img src="img/noj2.png" alt="" style="width: 250px; height:auto;"></div>
+			<div><img src="img/dr3.png" alt="" style="width: 250px; height:auto;"></div>
+		</div>
+	</div>
+	<button class="start" onclick="start()">START</button>
+        </div>
+    </section>
+
+
+
+    <script>
+        var cards_block = document.querySelector('.cards');
+var cards = document.querySelectorAll('.cards > div');
+
+function start() {
+  var random = Math.floor(Math.random() * 9); // От 0 до 8
+  cards_block.style.left = -random * 300 + 'px';
+  setTimeout(function() {
+    random++;
+    cards[random].style.background = '#7B90F7';
+    cards[random].style.color = 'white';
+  }, 5000)
+}
+    </script>
+</body>
+</html>
