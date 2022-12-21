@@ -9,9 +9,9 @@ const CART = {
         }else{
             //dummy test data
             CART.contents = [
-                {id:1, title:'Apple', qty:5, itemPrice: 0.85},
-                {id:2, title:'Banana', qty:3, itemPrice: 0.35},
-                {id:3, title:'Cherry', qty:8, itemPrice: 0.05}
+                {id:1, title:'Apple', qty:1, itemPrice: 0.85},
+                {id:2, title:'Banana', qty:1, itemPrice: 0.35},
+                {id:3, title:'Cherry', qty:1, itemPrice: 0.05}
             ];
             CART.sync();
         }
@@ -45,7 +45,9 @@ const CART = {
                     id: arr[0].id,
                     title: arr[0].title,
                     qty: 1,
-                    itemPrice: arr[0].price
+                    price: arr[0].price,
+                    img: arr[0].img,
+                    category: arr[0].category
                 };
                 CART.contents.push(obj);
                 //update localStorage
@@ -88,6 +90,7 @@ const CART = {
         });
         //update localStorage
         CART.sync()
+
     },
     empty(){
         //empty whole cart
@@ -127,17 +130,36 @@ document.addEventListener('DOMContentLoaded', ()=>{
 });
 
 function showCart(){
-    let cartSection = document.getElementById('cart');
+    let cartSection = document.getElementById('cart products clearfix');
     cart.innerHTML = '';
-    let s = CART.sort('qty');
+    let s = CART.sort('id');
     s.forEach( item =>{
-        let cartitem = document.createElement('div');
-        cartitem.className = 'cart-item';
+        let cartitem = document.createElement('li');
+        cartitem.className = 'product-wrapper';
 
-        let title = document.createElement('h3');
+        let link = document.createElement('a');
+        link.className = 'product'
+        link.href = item.category;
+        cartitem.appendChild(link)
+
+        let photo_block = document.createElement('div');
+        photo_block.className = 'product-photo'
+        link.appendChild(photo_block);
+
+        let photo = document.createElement('img')
+        photo.src = 'img/'+item.img
+        console.log(item.img)
+        photo_block.appendChild(photo)
+
+        let title = document.createElement('h1');
         title.textContent = item.title;
-        title.className = 'title'
-        cartitem.appendChild(title);
+        title.className = 'names'
+        link.appendChild(title);
+
+        let price = document.createElement('h1');
+        price.textContent = item.price;
+        price.className = 'price'
+        link.appendChild(price);
 
         let controls = document.createElement('div');
         controls.className = 'controls';
@@ -145,6 +167,7 @@ function showCart(){
 
         let plus = document.createElement('span');
         plus.textContent = '+';
+        plus.style = 'padding: 10px 10px; background-color:green'
         plus.setAttribute('data-id', item.id)
         controls.appendChild(plus);
         plus.addEventListener('click', incrementCart)
@@ -155,16 +178,17 @@ function showCart(){
 
         let minus = document.createElement('span');
         minus.textContent = '-';
+        minus.style = 'padding: 10px 10px; background-color:red'
         minus.setAttribute('data-id', item.id)
         controls.appendChild(minus);
         minus.addEventListener('click', decrementCart)
 
-        let price = document.createElement('div');
-        price.className = 'price';
-        let cost = new Intl.NumberFormat('en-CA',
-            {style: 'currency', currency:'CAD'}).format(item.qty * item.itemPrice);
-        price.textContent = cost;
-        cartitem.appendChild(price);
+        // let price = document.createElement('div');
+        // price.className = 'price';
+        // let cost = new Intl.NumberFormat('en-CA',
+        //     {style: 'currency', currency:'CAD'}).format(item.qty * item.itemPrice);
+        // price.textContent = cost;
+        // cartitem.appendChild(price);
 
         cartSection.appendChild(cartitem);
     })
