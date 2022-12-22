@@ -167,7 +167,7 @@ function showCart(){
 
         let plus = document.createElement('span');
         plus.textContent = '+';
-        plus.style = 'padding: 10px 10px; background-color:green'
+        plus.style = 'padding: 10px 10px; background-color:green;q'
         plus.setAttribute('data-id', item.id)
         controls.appendChild(plus);
         plus.addEventListener('click', incrementCart)

@@ -5,11 +5,40 @@
         "img":"awp1.png",
         "price":350,
         "category":"awp.html"
-    },{
+    },
+    {
+        "id":124,
+        "title":"AWP",
+        "img":"awp2.png",
+        "price":400,
+        "category":"awp.html"
+    },
+    {
+        "id":125,
+        "title":"AWP",
+        "img":"awp3.png",
+        "price":450,
+        "category":"awp.html"
+    },
+    {
         "id":12,
         "title":"Desert digle",
         "img":"pist1.png",
         "price":200,
+        "category":"pist.html"
+    },
+    {
+        "id":14,
+        "title":"Five Seven",
+        "img":"pist2.png",
+        "price":250,
+        "category":"pist.html"
+    },
+    {
+        "id":15,
+        "title":"Revolver",
+        "img":"pist3.png",
+        "price":300,
         "category":"pist.html"
     },
     {
@@ -25,5 +54,54 @@
         "img":"vint2.png",
         "price":320,
         "category":"vint.html"
+    },
+    {
+        "id":13,
+        "title":"M4 A1",
+        "img":"vint3.png",
+        "price":350,
+        "category":"vint.html"
+    },
+    {
+        "id":20,
+        "title":"M4 A1",
+        "img":"dr1.png",
+        "price":450,
+        "category":"drob.html"
+    },
+    {
+        "id":21,
+        "title":"M4 A1",
+        "img":"dr2.png",
+        "price":400,
+        "category":"drob.html"
+    },
+    {
+        "id":22,
+        "title":"M4 A1",
+        "img":"dr3.png",
+        "price":500,
+        "category":"drob.html"
+    },
+    {
+        "id":30,
+        "title":"M4 A1",
+        "img":"noj1.png",
+        "price":150,
+        "category":"noj.html"
+    },
+    {
+        "id":30,
+        "title":"M4 A1",
+        "img":"noj2.png",
+        "price":100,
+        "category":"noj.html"
+    },
+    {
+        "id":30,
+        "title":"M4 A1",
+        "img":"noj3.png",
+        "price":200,
+        "category":"noj.html"
     }
 ]
